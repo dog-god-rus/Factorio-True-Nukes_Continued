@@ -146,7 +146,7 @@ data:extend{
     stack_size = 1
   },
   {
-    type = "furnace",
+    type = "lab",
     name = "nuclear-test-site",
     is_military_target = true,
     icon = "__True-Nukes_Continued__/graphics/nuclear-test-building.png",
@@ -158,6 +158,8 @@ data:extend{
     max_health = 5000,
     corpse = "assembling-machine-1-remnants",
     dying_explosion = "massive-explosion",
+    science_pack_drain_rate_percent = 1,
+    inputs = {},
     resistances =
     {
       {
@@ -404,3 +406,9 @@ data:extend{
     }
   }
 }
+
+for k, v in pairs(data.raw.tool) do 
+  if string.len(k) >= string.len("test-pack-") and string.sub(k, 0, string.len("test-pack-")) == "test-pack-" then
+    table.insert(data.raw.lab["nuclear-test-site"].inputs, k)
+  end
+end
