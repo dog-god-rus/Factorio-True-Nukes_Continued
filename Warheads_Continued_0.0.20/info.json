@@ -1,11 +1,11 @@
 {
-	"name": "Warheads",
-	"version": "0.0.18",
-	"title": "Warheads",
-	"author": "BicycleEater",
+	"name": "Warheads_Continued",
+	"version": "0.0.20",
+	"title": "Warheads Continued",
+	"author": "Daimonfire",
 	"description": "Acts as a super-cross mod for weapons, allowing mods adding warheads to avoid working to support every different mod.",
-	"homepage": "https://github.com/More-Wrong/Factorio-True-Nukes",
-	"factorio_version": "1.1",
+	"homepage": "https://github.com/Daimonfire1/Factorio-True-Nukes_Continued",
+	"factorio_version": "2.0",
 	"dependencies": [
 		"? SchallTankPlatoon",
 		"? bobwarfare",
