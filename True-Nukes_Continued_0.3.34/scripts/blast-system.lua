@@ -78,7 +78,7 @@ local function damage_entity(surface, distSq, ePos, power, fire, damage_init, bl
     else
       entity.health = entity.health-damage
       if entity.tree_stage_index_max ~= entity.tree_stage_index then
-        local damage_level = (1-entity.health/eProto.max_health) * (entity.tree_stage_index_max - entity.tree_stage_index)
+        local damage_level = (1-entity.health/eProto.get_max_health()) * (entity.tree_stage_index_max - entity.tree_stage_index)
         entity.tree_stage_index = math.max(math.ceil(damage_level) + entity.tree_stage_index, 1)
       end
     end

@@ -133,14 +133,14 @@ function everyTick(event)
 						
 						flash.x_scale = fs
 						flash.y_scale = fs
-						flashBase.scale = 1 - ftProgress
+						flashBase.scale = math.max(1 - ftProgress, 0.001)
 						
 						if (maxDur - effects.ttl) < effects.flashTransitionStartFadeOut then
 							local fctProgress = (maxDur - effects.ttl - effects.flashDuration) / (effects.flashTransitionStartFadeOut - effects.flashDuration) 
 							
 							local currentColor = flash.color
 							
-							flash.color{currentColor.r + effects.flashTransitionColorStep[1], currentColor.g + effects.flashTransitionColorStep[2], currentColor.b + effects.flashTransitionColorStep[3], currentColor.a + effects.flashTransitionColorStep[4]}
+							flash.color = {currentColor.r + effects.flashTransitionColorStep[1], currentColor.g + effects.flashTransitionColorStep[2], currentColor.b + effects.flashTransitionColorStep[3], currentColor.a + effects.flashTransitionColorStep[4]}
 						else
 							local ffaProgress = 1 - ((maxDur - effects.ttl - effects.flashTransitionStartFadeOut) / (effects.flashTransition - effects.flashTransitionStartFadeOut))
 							

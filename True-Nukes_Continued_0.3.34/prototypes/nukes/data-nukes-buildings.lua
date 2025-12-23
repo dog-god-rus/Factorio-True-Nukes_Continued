@@ -146,11 +146,11 @@ data:extend{
     stack_size = 1
   },
   {
-    type = "lab",
+    type = "furnace",
     name = "nuclear-test-site",
     is_military_target = true,
     icon = "__True-Nukes_Continued__/graphics/nuclear-test-building.png",
-    icon_size = 64, icon_mipmaps = 1,
+    icon_size = 64,
     source_inventory_size = 1,
     result_inventory_size = 1,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
@@ -158,8 +158,12 @@ data:extend{
     max_health = 5000,
     corpse = "assembling-machine-1-remnants",
     dying_explosion = "massive-explosion",
-    science_pack_drain_rate_percent = 1,
-    inputs = {},
+    picture =
+    {
+      filename = "__True-Nukes_Continued__/graphics/nuclear-test-building.png",
+      width = 64,
+      height = 64
+    },
     resistances =
     {
       {
@@ -406,9 +410,3 @@ data:extend{
     }
   }
 }
-
-for k, v in pairs(data.raw.tool) do 
-  if string.len(k) >= string.len("test-pack-") and string.sub(k, 0, string.len("test-pack-")) == "test-pack-" then
-    table.insert(data.raw.lab["nuclear-test-site"].inputs, k)
-  end
-end

@@ -7,7 +7,7 @@ storage.allowAchievements = true
 
 
 local function checkAllowAchievements()
-  if(scripts.active_mods["space-exploration"]) then
+  if(script.active_mods["space-exploration"]) then
     storage.allowAchievements = true
   end
   if(storage.allowAchievements)then
