@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.34
+Date: 2025-12-23
+  Changes:
+    - First pass on (somewhat) working port to Factorio 2.0
+  Info:
+    - The nuclear testing system doesn't work right now and the related buildings are invisible. I am aware of that
+---------------------------------------------------------------------------------------------------
 Version: 0.3.33
 Date: 2023-11-27
   Bugfixes:
